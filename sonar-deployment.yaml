@@ -21,9 +21,9 @@ spec:
         - name: SONARQUBE_JDBC_USERNAME
           value: sonar
         - name: SONARQUBE_JDBC_PASSWORD
-          value: sonar
+          value: sonar.1234
         - name: SONARQUBE_JDBC_URL
-          value: jdbc:mysql://sonar-mysql:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
+          value: jdbc:mysql://mysql01.dev.biger.corp:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
         volumeMounts:
          - name: sonarqube-extensions
            mountPath: /opt/sonarqube/extensions
@@ -32,11 +32,11 @@ spec:
       volumes:
       - name: sonarqube-extensions
         nfs:
-          server: ""
+          server: "nfs.ucex.corp"
           path: "/sonarqube/extensions"
           readOnly: false
       - name: sonarqube-data
         nfs:
-          server: ""
+          server: "nfs.ucex.corp"
           path: "/sonarqube/data"
           readOnly: false
