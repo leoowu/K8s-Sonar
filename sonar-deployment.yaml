@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: sonarqube
-        image: sonarqube:6.5
+        image: harbor.ucex.corp/biger/sonarqube:7.5
         ports:
         - name: sonarqube
           containerPort: 9000
