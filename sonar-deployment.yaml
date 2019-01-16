@@ -21,7 +21,7 @@ spec:
         - name: SONARQUBE_JDBC_USERNAME
           value: sonar
         - name: SONARQUBE_JDBC_PASSWORD
-          value: sonar.1234
+          value: sonar.abcd.1234
         - name: SONARQUBE_JDBC_URL
           value: jdbc:mysql://mysql01.dev.biger.corp:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
         volumeMounts:
